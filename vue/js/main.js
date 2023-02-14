@@ -4,8 +4,9 @@ let app = new Vue({
         product: "Socks",
         image: "./assets/vmSocks-green-onWhite.jpg",
         altText: "A pair of socks",
-        inStock: true,
+        inStock: false,
         details: ['80% cotton', '20% polyester', 'Gender-neutral'],
+        //задаёт уникальное свойство объекту
         variants: [
             {
                 variantId: 2234,
@@ -21,16 +22,13 @@ let app = new Vue({
         cart: 0
     },
     methods: {
+        // метод для отслеживания события click
         addToCart() {
             this.cart += 1
         },
+        //метод для обновлени продукта при наведении
         updateProduct(variantImage) {
             this.image = variantImage
-        },
-        removeFromCart() {
-            this.cart -= 1
         }
     }
 })
-
-
