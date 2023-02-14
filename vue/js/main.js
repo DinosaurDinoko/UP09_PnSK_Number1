@@ -29,6 +29,7 @@ let app = new Vue({
         //метод для обновлени продукта при наведении
         updateProduct(variantImage) {
             this.image = variantImage
-        }
+        },
+
     }
 })
